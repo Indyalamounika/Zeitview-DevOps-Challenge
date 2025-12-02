@@ -10,7 +10,7 @@ terraform {
     bucket = "mounika-tf-remote-state-prod"
     key = "eks"
     region = "us-east-1"
-    dynamodb_table = "laxman-tf-remote-state-prod"
+    dynamodb_table = "mounika-tf-remote-state-prod"
 
   }
 }

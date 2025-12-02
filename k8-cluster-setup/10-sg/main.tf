@@ -1,16 +1,7 @@
-module "mysql_sg" {
-    source = "git::https://github.com/Lakshmanp145/terraform-sg-module.git?ref=main"
-    project = var.project
-    environment = var.environment
-    description = "Created for mysql instances in expense dev"
-    common_tags = var.common_tags
-    vpc_id = local.vpc_id
-    sg_name = var.sg_name
-}
-  
 
+  
 module "bastion_sg" {
-    source = "git::https://github.com/Lakshmanp145/terraform-sg-module.git?ref=main"
+    source = "git::https://github.com/mounikaindyala/terraform-sg-module.git?ref=main"
     project = var.project
     environment = var.environment
     description = "Created for bastion instances in expense dev"
@@ -19,19 +10,10 @@ module "bastion_sg" {
     sg_name = "bastion"
 }
 
-module "ingress_alb_sg" {
-    source = "git::https://github.com/Lakshmanp145/terraform-sg-module.git?ref=main"
-    project = var.project
-    environment = var.environment
-    description = "Created for backend Alb in expense dev"
-    common_tags = var.common_tags
-    vpc_id = local.vpc_id
-    sg_name = "app-alb"
-}
 
 
 module "eks_control_plane_sg" {
-    source = "git::https://github.com/Lakshmanp145/terraform-sg-module.git?ref=main"
+    source = "git::https://github.com/mounikaindyala/terraform-sg-module.git?ref=main"
     project = var.project
     environment = var.environment
     description = "Created for eks-control-plane"
@@ -41,7 +23,7 @@ module "eks_control_plane_sg" {
 }
 
 module "eks_node_sg" {
-    source = "git::https://github.com/Lakshmanp145/terraform-sg-module.git?ref=main"
+    source = "git::https://github.com/mounikaindyala/terraform-sg-module.git?ref=main"
     project = var.project
     environment = var.environment
     description = "Created for eks-nodes"
