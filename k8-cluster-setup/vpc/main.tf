@@ -1,5 +1,5 @@
 module "vpc" {
-    source = "git::https://github.com/Lakshmanp145/vpc-module.git?ref=main"
+    source = "git::https://github.com/mounikaindyala/vpc-module.git?ref=main"
     project = var.project
     environment = var.environment
     common_tags = var.common_tags
