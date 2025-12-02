@@ -1,5 +1,5 @@
 resource "aws_key_pair" "eks" {
-  key_name = "expense-eks"
+  key_name = "Zeitview-eks"
   #public_key = file("~/.ssh/eks.rsa.pub")
   public_key = file("C:\\devops\\eksp.pub")
   

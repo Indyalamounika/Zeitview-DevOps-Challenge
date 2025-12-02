@@ -8,7 +8,7 @@ variable "environment" {
 
 variable "common_tags" {
     default = {
-        project = "eitview"
+        project = "Zeitview"
         environment = "dev"
         terraform = "true"
     }
