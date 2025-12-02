@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-ingress-to-app-b
+  namespace: zeitview
+spec:
+  podSelector:
+    matchLabels:
+      app: app-b
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: app-a
+    - podSelector:
+        matchLabels:
+          app: app-c
+    ports:
+    - protocol: TCP
+      port: 80
